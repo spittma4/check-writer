@@ -30,9 +30,6 @@ function numToText(inputString, outputCase){
 
   var cents = inputNum[inputLength - 2 ] + inputNum[inputLength - 1];
   var centsOutput = " and "  + twoDigitNumberOutput(cents) + " cents";
-
-
-
   switch(dollarLength){
     case 1:
       output = singleDigitOutput(leftSideDollars) + " dollars" + centsOutput;
@@ -123,7 +120,6 @@ function tenMillionOutput(eightDigitNum){
   for (i = 2; i < 8; ++i){
     remainder = remainder + eightDigitNum[i]
   }
-
   return twoDigitNumberOutput(tenMillionsPlace) + " million " + sixDigitNumberOutput(remainder); 
 }
 
@@ -135,7 +131,7 @@ function millionOutput(sevenDigitNum){
   for (i = 1; i < 7; ++i){
     remainder = remainder + sevenDigitNum[i]
   }
-
+  
   switch(millionsPlace){
     case "0":
       return sixDigitNumberOutput(remainder)
@@ -158,8 +154,6 @@ function millionOutput(sevenDigitNum){
     case "9":
       return "nine million " + sixDigitNumberOutput(remainder);
   }
-
-
 }
 
 function sixDigitNumberOutput(sixDigitNum){
