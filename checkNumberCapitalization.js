@@ -76,9 +76,8 @@ function numToText(inputString, outputCase){
     default:
       output.toLowerCase();
       break;
-
   }
-
+  
   return output;	
 }
 
@@ -120,6 +119,7 @@ function tenMillionOutput(eightDigitNum){
   for (i = 2; i < 8; ++i){
     remainder = remainder + eightDigitNum[i]
   }
+  
   return twoDigitNumberOutput(tenMillionsPlace) + " million " + sixDigitNumberOutput(remainder); 
 }
 
